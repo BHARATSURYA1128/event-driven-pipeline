@@ -8,4 +8,4 @@ __pycache__/
 *.pyc
 
 # Ignore Lambda zips
-*.zip
+#*.zip

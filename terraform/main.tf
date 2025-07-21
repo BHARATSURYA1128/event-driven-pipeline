@@ -21,11 +21,11 @@ resource "aws_iam_role" "lambda_exec" {
 
 resource "aws_lambda_function" "process_data" {
   function_name = "ingestLambda"
-  filename      = "../lambda.zip"
+  filename      = "lambda.zip"
   handler       = "lambda_function.lambda_handler"
   runtime       = "python3.9"
   role          = aws_iam_role.lambda_exec.arn
-  source_code_hash = filebase64sha256("../lambda.zip")
+  source_code_hash = filebase64sha256("lambda.zip")
 }
 
 resource "aws_apigatewayv2_api" "http_api" {
@@ -80,11 +80,11 @@ resource "aws_iam_role_policy_attachment" "lambda_s3_attach" {
 }
 resource "aws_lambda_function" "report_data" {
   function_name = "reportLambda"
-  filename      = "../report_lambda.zip"
+  filename      = "report_lambda.zip"
   handler       = "report_lambda.lambda_handler"
   runtime       = "python3.9"
   role          = aws_iam_role.lambda_exec.arn
-  source_code_hash = filebase64sha256("../report_lambda.zip")
+  source_code_hash = filebase64sha256("report_lambda.zip")
 }
 
 resource "aws_iam_policy" "athena_ses_policy" {
