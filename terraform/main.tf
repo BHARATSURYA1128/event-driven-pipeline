@@ -20,6 +20,7 @@ resource "aws_iam_role" "lambda_exec" {
 }
 
 resource "aws_lambda_function" "process_data" {
+  timeout = 30
   function_name = "ingestLambda"
   filename      = "lambda.zip"
   handler       = "lambda_function.lambda_handler"
@@ -79,6 +80,7 @@ resource "aws_iam_role_policy_attachment" "lambda_s3_attach" {
   policy_arn = aws_iam_policy.lambda_s3_policy.arn
 }
 resource "aws_lambda_function" "report_data" {
+  timeout = 30
   function_name = "reportLambda"
   filename      = "report_lambda.zip"
   handler       = "report_lambda.lambda_handler"
