@@ -50,7 +50,7 @@ This project showcases a fully automated, serverless, event-driven data pipeline
 Send a POST request to the API Gateway endpoint:
 
 ```bash
-curl -X POST https://your-api-id.execute-api.us-east-1.amazonaws.com/ingest \
+curl -X POST [https://your-api-id.execute-api.us-east-1.amazonaws.com/ingest](https://r150hf07y8.execute-api.us-east-1.amazonaws.com/ingest) \
   -H "Content-Type: application/json" \
   -d '{"user_id": "123", "action": "login", "timestamp": "2025-07-21T14:00:00Z"}'
 ```
