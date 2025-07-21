@@ -80,7 +80,9 @@ Edit
 └── README.md                  # This file
 
 ```
-🔐 AWS Permissions
+---
+
+### 🔐 AWS Permissions
 I ensured proper AWS permissions using:
 
 lambda_exec_role for Lambda
@@ -88,14 +90,17 @@ lambda_exec_role for Lambda
 lambda_s3_write_policy for ingesting data
 
 athena-ses-lambda-policy for querying + emailing
+---
 
-📬 SES Configuration
+### 📬 SES Configuration
 Verified sender and recipient addresses in SES sandbox
 
 To go production-ready, request SES production access via AWS Support
 
-💡 What I Learned
-✅ Deep hands-on experience with:
+---
+
+### 💡 What I Learned
+### ✅ Deep hands-on experience with:
 
 AWS Lambda, S3, Athena, SES, CloudWatch Events
 
