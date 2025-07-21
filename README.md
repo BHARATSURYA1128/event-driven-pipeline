@@ -90,6 +90,7 @@ lambda_exec_role for Lambda
 lambda_s3_write_policy for ingesting data
 
 athena-ses-lambda-policy for querying + emailing
+
 ---
 
 ### 📬 SES Configuration
