@@ -1,5 +1,5 @@
-# Ignore Terraform internals, but NOT code
-#.terraform/
+ Ignore Terraform internals, but NOT code
+.terraform/
 #*.tfstate
 #*.tfstate.backup
 
