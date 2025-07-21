@@ -1,0 +1,11 @@
+# Ignore Terraform internals, but NOT code
+.terraform/
+*.tfstate
+*.tfstate.backup
+
+# Ignore Python & build
+__pycache__/
+*.pyc
+
+# Ignore Lambda zips
+*.zip
